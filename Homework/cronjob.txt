@@ -1,0 +1,9 @@
+I would run the following command to start:
+	sudo crontab -e
+This will allow me to begin creating crontab jobs.
+
+I would then type the following into a line on the editor:
+	0 17 */2 * * ./runner.sh 'hello' 
+
+
+This will run ./runner.sh 'hello' at 17:00 every second day
