@@ -18,9 +18,9 @@ These are some of the largest central banks and have a lot of influence over the
 Cryptcurrency:
 -Bitcoin.
 -Dogecoin.
--Solano. 
+-Solana. 
 
-These three cryptos give a good spread over the landscape of cyrptocurrencies. Bitcoin being the largest and most popular, Dogecoin being a 'meme' coin attracting different demographics of crypto traders and Solano being a newer crypto with different underlying tech.
+These three cryptos give a good spread over the landscape of cyrptocurrencies. Bitcoin being the largest and most popular, Dogecoin being a 'meme' coin attracting different demographics of crypto traders and Solana being a newer crypto with different underlying tech.
 
 
 We hope to discover which coins are most impacted by the central banks and which central banks are the most influential. 
