@@ -1,3 +1,5 @@
-API Key: e267228dfe07586b6b20cddb18e30275
+https://api.stlouisfed.org
 
-https://fred.stlouisfed.org/docs/api/
+fred/series/observations
+
+https://api.stlouisfed.org/fred/series/observations?series_id=UNRATE&api_key=abc123&observation_start=2020-01-01
