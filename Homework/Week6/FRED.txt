@@ -1,0 +1,5 @@
+https://api.stlouisfed.org
+
+fred/series/observations
+
+https://api.stlouisfed.org/fred/series/observations?series_id=UNRATE&api_key=abc123&observation_start=2020-01-01
