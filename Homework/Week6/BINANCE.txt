@@ -2,5 +2,5 @@ https://api.binance.com
 
 /api/v3/klines
 
-"?symbol=BTCUSDT&interval=1d&limit=75&startTime=1661983200000"
+"?symbol=BTCUSDT&interval=1h&limit=75&startTime=1661983200000"
 75 1 day klines from the 01-09-2022
