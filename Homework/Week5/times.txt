@@ -1,0 +1,3 @@
+The required time using Feather format is: 0.05828285217285156 seconds 
+The required time using HDF format is: 0.24663066864013672 seconds 
+The required time using Parquet format is: 0.2981569766998291 seconds 
