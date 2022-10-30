@@ -1,13 +1,15 @@
 FROM python:3.8
 
-Copy . .
-WORKDIR /data
+WORKDIR /Users/selenia/DigitalTools_project/Homework/Week2
+
+COPY . .
+
 # install dependencies
 RUN pip install matplotlib
 RUN pip install pandas
 
-ADD ../../data/coding-environment-exercise.csv data/coding-environment-excersie.csv
-CMD ["python", "./Week2.py"]
+
+CMD ["python", "Week2.py"]
 
 #commands to run in the terminal:
 # docker build -t yoursuername/plot .
