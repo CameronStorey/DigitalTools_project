@@ -5,14 +5,10 @@ Research Project for Digital Tools for Fianance
 
 TITLE: The effect of interest rates on Cryptocurrency.
 
-The main purpose of our project is to investigate how interest rate changes made by large central banks effects the value of cryptocurrencies. To perform our analysis, we decided on three central banks and three cryptocurrencies to explore.
+The main purpose of our project is to investigate how interest rate changes made by tThe Federal Reserve effect the value of cryptocurrencies. To perform our analysis, we decided on three central banks and three cryptocurrencies to explore.
 
-Central Banks:
--The Federal Reserve.
--European Central Bank.
--Bank of Japan.
 
-These are some of the largest central banks and have a lot of influence over the global markets. We also chose these three as it gives good cover over most of the world.
+We will focus on the Federal Resevre and try to find any key events from various toher central banks that have caused impact on oiur cryptocurrency prices.
 
 
 Cryptcurrency:
@@ -20,10 +16,10 @@ Cryptcurrency:
 -Dogecoin.
 -Solana. 
 
-These three cryptos give a good spread over the landscape of cyrptocurrencies. Bitcoin being the largest and most popular, Dogecoin being a 'meme' coin attracting different demographics of crypto traders and Solana being a newer crypto with different underlying tech.
+These three cryptos give a good spread over the landscape of cyrptocurrencies. Bitcoin being the largest in market capitilisation and most popular, Dogecoin being a 'meme' coin attracting different demographics of crypto traders and Solana being a newer crypto with different underlying tech.
 
 
-We hope to discover which coins are most impacted by the central banks and which central banks are the most influential. 
+We hope to discover which coins are most impacted by the central bank interest rate changes and what effect these changes have.
  
 Project Organization
 ------------
