@@ -1,0 +1,12 @@
+Daily Range (will require a high and low, I think the data has that)
+
+Moving Average - 5,10,20,50 days
+ - moving average for both BTC price and the value of the daily range
+ - want to look at the moving average on either side of the interest rate changes.
+
+Volatility
+ - Use a rolling window, similar to the moving average.
+ - idea is that, do we see a spike in the volatility once we see a change in the interest rate.
+
+We could also look at options for BTC, I think there is a market for them. We can consider the greeks - specifically rho which is the option price sensitivity to risk free interest.
+
