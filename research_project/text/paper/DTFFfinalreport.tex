@@ -70,8 +70,8 @@
 
 \begin{large}	
 	\begin{center}
-		\textbf{Insert title - Research BTC} \vspace{0.1cm} \\ {Prof. Igor Pozdeev? } \vspace{2cm} \\ \textbf{Matthias Olieslagers - 22714034}  \\ \textbf{Cameron Storey - 22714034} \\ 
-        \textbf{Marc David Parker - 22714034}\\
+		\textbf{Insert title - Research BTC} \vspace{0.1cm} \\ {Prof. Igor Pozdeev? } \vspace{2cm} \\ \textbf{Matthias Olieslagers - 22714034}  \\ \textbf{Cameron Storey - Adapt stud nr} \\ 
+        \textbf{Marc David Parker - Adapt stud nr}\\
         \textbf{Qian Chen - 21742226}\\
 	\end{center}
 \end{large}
@@ -83,12 +83,11 @@
 \bigskip
 \section{Introduction}
 
-\subsection*{subsection 1}
+\subsection*{Introduction}
 
-Indicate here what makes sense for our research:
-\newline \newline
-We will look at how changes in FED rate, or on a daily basis well reflected as the SOFR rate, will impact cryptocurrency prices, such as mainly the BTC. 
-General hypothesis, the higher the FED goes, the lower the crypto prices. 
+The goal of this research report is to discover how changes in FED interest rates have an impact on the prices of cryptocurrencies (e.g. Bitcoin) \newline
+The up-front hypothesis, based on our knowledge of the financial markets and backed by several resources (state resources) is that the higher the FED interest rate goes, the lower the crypto prices will drop, i.e. they have a negative correlation. In this report, an attempt will be made to  confirm (or invalidate) the hypothesis statement above. \newline
+In the first section, the different data sources will be covered. What does the data exactly represent and why is it relevant to look into for this particular research. In the second part, the methodology will be laid out. Lastly, the results will be critically evaluated and interpreted and a final conclusion will be provided. 
 
 
 \begin{Program}[!htb]
@@ -320,36 +319,6 @@ end
 \end{lstlisting}
 \caption{Q2 - Q4 - Function NCTPDF}
 \label{Q2 & Q4 - Function NCTPDF}
-\end{Program}
-
-\begin{Program}[!htb]
-\begin{lstlisting}[style=Matlab-editor,basicstyle=\mlttfamily\footnotesize] 
-%Q3 - Function: AsymstableES --------------------------------------------
-function [ES, VaR] = asymstableES (xi, a, b, mu, scale)
-if nargin < 3 , b=0; end , if nargin < 4 , mu=0; end
-if nargin < 5 , scale = 1; end 
-
-% Get q, the quantile from the S(0 ,1) distribution
-opt=optimset('Display', 'off', 'TolX', 1e-6) ;
-q=fzero(@(x)stabcdfroot(x,xi,a,b), -6); VaR=mu+scale*q;
-
-if (q == 0)
- t0 = (1 / a) * atan ( b * tan ( pi * a /2) ) ;
- ES = ((2 * gamma((a-1)/a)) / (pi - 2*t0)) * (cos(t0) / cos(a*t0)^(1/a));
- return;
-end
-
-ES=(scale*Stoy(q, a, b) / xi)+mu;
-
-end
-
-function diff = stabcdfroot(x, xi, a, b)
-[~,F] = asymstab(x, a, b);
-diff = F-xi;
-end
-\end{lstlisting}
-\caption{Q3 - Function AsymstableES}
-\label{Q3 - Function AsymstableES}
 \end{Program}
 
 \end{document}
