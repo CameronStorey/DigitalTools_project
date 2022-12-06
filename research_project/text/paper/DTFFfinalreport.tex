@@ -107,35 +107,6 @@ more code
 \end{Program}
 
 
-\begin{center}
-\begin{tabular}{||c | c c||} 
- \hline
- Sample size T & Length CI (nonparametric) & Length CI (parametric) \\ [0.5ex] 
- \hline\hline
- 250 & 2.5471 & 2.3270 \\ 
- \hline
- 500 & 2.1019 & 1.6376 \\
- \hline
- 2000 & 1.0723 & 0.8013 \\ [1ex] 
- \hline
-\end{tabular}
-\end{center}
-\vspace{3pt}
-\begin{center}
-\begin{tabular}{||c | c c||} 
- \hline
- Sample size T & Coverage (nonparametric) & Coverage (parametric) \\ [0.5ex] 
- \hline\hline
- 250 & 0.7680 & 0.8680 \\ 
- \hline
- 500 & 0.8280 & 0.8760 \\
- \hline
- 2000 & 0.8800 & 0.8920 \\ [1ex] 
- \hline
-\end{tabular}
-\end{center}
-\vspace{15pt}
-
 \section{Data}
 
 \begin{Program}[!htb]
@@ -148,177 +119,16 @@ dummy
 \end{Program}
 
 
-1) \textbf{Example 1}: $mu = 0, df = 3, T = 100$     \newline ---     ES simulation = -6.4912, ES numeric int = -6.7485,  \textbf{Deviation of ES's = 0.2573}  \newline
-2) \textbf{Example 2}: $mu = -1, df =3, T = 500$ \newline --- ES simulation = -12.8827, ES numeric int = -12.8923 , \textbf{Deviation of ES's = 0.0096} \newline
-3) \textbf{Example3}: $mu = -3, df = 6, T = 2000$  \newline--- ES simulation = -15.6922, ES numeric int = -15.6920 , \textbf{Deviation of ES's = 0.0002}\newline\newline
-
-\begin{center}
-\begin{tabular}{||c | c | c c||} 
- \hline
- Sample size T & Value $\mu$ & Length CI (nonparametric) & Length CI (parametric) \\ [0.5ex] 
- \hline\hline
- \multirow{4}{4em}{T=100} & $\mu$ = 0 & 5.2666 & 8.9319\\ 
-& $\mu$ = -1 & 9.6449 & 9.7008 \\ 
-& $\mu$ = -2 & 13.2334 & 19.2469 \\ 
-& $\mu$ = -3 & 19.2560 & 43.7532 \\ 
- \hline
- \multirow{4}{4em}{T=500} & $\mu$ = 0 & 3.0341 & 2.5200\\ 
-& $\mu$ = -1 & 5.5520 & 3.1778 \\ 
-& $\mu$ = -2 & 7.9358 & 4.9203 \\ 
-& $\mu$ = -3 & 10.3040 & 7.5688 \\ 
- \hline
- \multirow{4}{4em}{T=2000} & $\mu$ = 0 & 1.6885 & 1.2255\\ 
-& $\mu$ = -1 & 2.7962 & 1.5368 \\ 
-& $\mu$ = -2 & 4.6726 & 2.4437 \\ 
-& $\mu$ = -3 & 5.9613 & 3.6360 \\ 
- \hline
-\end{tabular}
-\end{center}
-
-\begin{center}
-\begin{tabular}{||c | c | c c||} 
- \hline
- Sample size T & Value $\mu$ & Coverage (nonparametric) & Coverage (parametric) \\ [0.5ex] 
- \hline\hline
- \multirow{4}{4em}{T = 100} & $\mu$ = 0 & 0.6800 & 0.8520\\ 
-& $\mu$ = -1 & 0.6440 & 0.6080 \\ 
-& $\mu$ = -2 & 0.6480 & 0.5800 \\ 
-& $\mu$ = -3 & 0.6880 & 0.6240 \\ 
- \hline
- \multirow{4}{4em}{T = 500} & $\mu$ = 0 & 0.7920 & 0.8800\\ 
-& $\mu$ = -1 & 0.8560 & 0.1960 \\ 
-& $\mu$ = -2 & 0.8040 & 0.1400 \\ 
-& $\mu$ = -3 & 0.8160 & 0.2040 \\ 
- \hline
- \multirow{4}{4em}{T=2000} & $\mu$ = 0 & 0.8880 & 0.8880\\ 
-& $\mu$ = -1 & 0.8640 & 0.0000 \\ 
-& $\mu$ = -2 & 0.8960 & 0.0000 \\ 
-& $\mu$ = -3 & 0.8480 & 0.0040 \\ 
- \hline
-\end{tabular}
-\end{center}
-
-\begin{itemize}
-  \item For both bootstrap methods, the length of the CI increases as the non-centrality increases.
-  \item For both methods, when the sample size T increases, the length of the CI becomes smaller.
-  \item Overall, the length of the CI is smaller for the parametric bootstrap method. Although in this table, this is not the case for T = 100, probably because T is too small. On the next page however (with df = 6) it does give that result also for T = 100 already.\newline
-\end{itemize}
+ 
 
 
 
-\begin{center}
-\begin{tabular}{||c | c | c c||} 
- \hline
- Sample size T & Value $\mu$ & Length CI (nonparametric) & Length CI (parametric) \\ [0.5ex] 
- \hline\hline
- \multirow{4}{4em}{T=100} & $\mu$ = 0 & 2.6481 & 2.5196\\ 
-& $\mu$ = -1 & 3.6423 & 2.9212 \\ 
-& $\mu$ = -2 & 4.9067 & 3.9172 \\ 
-& $\mu$ = -3 & 5.9148 & 4.8387 \\ 
- \hline
- \multirow{4}{4em}{T=500} & $\mu$ = 0 & 1.4005 & 1.0989\\ 
-& $\mu$ = -1 & 1.9349 & 1.2212 \\ 
-& $\mu$ = -2 & 2.5379 & 1.5534 \\ 
-& $\mu$ = -3 & 3.2275 & 2.0002 \\ 
- \hline
- \multirow{4}{4em}{T=2000} & $\mu$ = 0 & n/a & n/a\\ 
-& $\mu$ = -1 & n/a & n/a \\ 
-& $\mu$ = -2 & n/a & n/a \\ 
-& $\mu$ = -3 & 1.6814 & 0.9832 \\ 
- \hline
-\end{tabular}
-\end{center}
 
-\begin{center}
-\begin{tabular}{||c | c | c c||} 
- \hline
- Sample size T & Value $\mu$ & Coverage (nonparametric) & Coverage (parametric) \\ [0.5ex] 
- \hline\hline
- \multirow{4}{4em}{T=100} & $\mu$ = 0 & 0.7200 & 0.8360\\ 
-& $\mu$ = -1 & 0.7040 & 0.6000 \\ 
-& $\mu$ = -2 & 0.7680 & 0.5560 \\ 
-& $\mu$ = -3 & 0.6800 & 0.4640 \\ 
- \hline
- \multirow{4}{4em}{T=500} & $\mu$ = 0 & 0.8440 & 0.8720\\ 
-& $\mu$ = -1 & 0.8840 & 0.2440 \\ 
-& $\mu$ = -2 & 0.8600 & 0.1080 \\ 
-& $\mu$ = -3 & 0.8280 & 0.0880 \\ 
- \hline
- \multirow{4}{4em}{T=2000} & $\mu$ = 0 & n/a & n/a\\ 
-& $\mu$ = -1 & n/a & n/a \\ 
-& $\mu$ = -2 & n/a & n/a \\ 
-& $\mu$ = -3 & 0.8920 & 0.0000 \\ 
- \hline
-\end{tabular}
-\end{center}
+\
+
 
 
 \newpage
 \section{Methodology}
-
-\begin{Program}[!htb]
-\begin{lstlisting}[style=Matlab-editor,basicstyle=\mlttfamily\footnotesize]
-more code xd
-\end{lstlisting}
-\caption{Question 3 }
-\label{Question 3 }
-\end{Program}
-
-\section{Results}
-
-\newpage
-\section{Appendix}
-
-\begin{Program}[!htb]
-\begin{lstlisting}[style=Matlab-editor,basicstyle=\mlttfamily\footnotesize]
-%Q1 - Function for MLE optimization ---------------------------------------
-function MLE = MLE_optimization_Q1(x,initvec)
-tol=1e-5;
-opts=optimset('Disp ', 'none ' , 'LargeScale ' , 'Off ' , ...
-'TolFun ' ,tol , 'TolX ' ,tol , 'Maxiter ' ,200) ;
-MLE = fminunc(@(param ) tloglik (param,x) , initvec , opts) ;
-
-function ll = tloglik(param,x)
-mu=param ( 1 ) ; c=param ( 2 ) ; v=param ( 3 ) ; 
-% i changed the order of the parameters to match the 
-% order of the built-in matlab mle output
-if v<0.01, v=rand ;  end 
-if c<0.01 , c=rand ; end 
-K=beta ( v /2 ,0.5)*sqrt( v ) ; z=(x-mu) / c ;
-ll = -log(c) -log(K) -(( v+1) /2) * log (1 + (z.^2) / v ); ll = -sum( ll ) ;
-\end{lstlisting}
-\caption{Q1 - Function for MLE optimization}
-\label{Q1 - Function for MLE optimization}
-\end{Program}
-
-
-\begin{Program}[!htb]
-\begin{lstlisting}[style=Matlab-editor,basicstyle=\mlttfamily\footnotesize]
-%Q2 & Q4 - Function: NCTPDF ------------------------------------------
-function pdfln = Q2_nctpdf ( x , nu , gam)
-vn2 = (nu + 1) / 2; rho = x .^2;
-pdfln = gammaln( vn2 ) - 1/2*log( pi*nu) - gammaln( nu / 2 ) - vn2*log1p ( rho / nu) ;
-if ( all (gam == 0) ) , return , end
-idx = ( pdfln >= -37) ; 
-if (any( idx ))
-gcg = gam.^2 ; pdfln = pdfln - 0.5*gcg ; xcg = x .*gam;
-term = 0.5*log(2) + log (xcg) - 0.5*log(max( realmin , nu+rho ) ) ;
-term ( term == -inf ) = log ( realmin ) ; term ( term == + inf ) = log ( realmax ) ;
-maxiter = 1e4 ; k = 0;
-logterms = gammaln ((nu+1+k) / 2 ) - gammaln( k+1) - gammaln( vn2 ) + k*term ;
-fractions = real (exp( logterms ) ) ; logsumk = log ( fractions ) ;
-while ( k < maxiter)
-k = k + 1;
-logterms = gammaln ( ( nu+1+k ) / 2 ) - gammaln( k+1) - gammaln( vn2 ) + k*term( idx ) ;
-fractions = real (exp( logterms-logsumk(idx))) ;
-logsumk( idx ) = logsumk( idx ) + log1p ( fractions ) ;
-idx(idx) = (abs(fractions) > 1e-4) ; if ( all ( idx == false ) ) , break , end
-end
-pdfln = real ( pdfln+logsumk) ;
-end
-\end{lstlisting}
-\caption{Q2 - Q4 - Function NCTPDF}
-\label{Q2 & Q4 - Function NCTPDF}
-\end{Program}
 
 \end{document}
