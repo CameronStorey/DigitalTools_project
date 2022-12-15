@@ -7,10 +7,7 @@ TITLE: The effect of interest rates on Cryptocurrency.
 
 The main purpose of our project is to investigate how interest rate changes made by The Federal Reserve effect the value of cryptocurrencies.
 
-More specifically, we will focus on the Federal Reserve and the Bitcoin as these are most impactful and best representative for the general market.
-
-**** We still have to update the project organization down below ****
-* Make sure this description matches our actual organization
+More specifically, we will focus on the Federal Reserve and the Bitcoin as these are best representative for the general market.
  
 Project Organization
 ------------
