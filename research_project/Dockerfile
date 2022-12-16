@@ -1,6 +1,4 @@
-FROM Jupiter/base-notebook
-
-WORKDIR /notebooks
+FROM jupyter/base-notebook
 
 COPY . .
 
@@ -11,15 +9,10 @@ RUN pip install pandas \
 	&& pip install fredapi \
 	&& pip install matplotlib \
 	&& pip install requests\
-	&& pip install json\
 	&& pip install datetime\
-	&& pip install os
+	&& echo "Installed the packages needed for the Jupyter Notebooks."
+
+#Let's define this parameter to install jupyter lab instead of the default juyter notebook command so we don't have to use it when running the container with the option -e
+ENV JUPYTER_ENABLE_LAB=yes
 
 
-
-CMD [ "python", "./your-daemon-or-script.py" ]
-
-#commands to run in the terminal:
-# docker build -t yoursuername/plot .
-# docker images
-# docker run yoursuername/plot
