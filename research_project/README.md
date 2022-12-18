@@ -9,6 +9,11 @@ The main purpose of our project is to investigate how interest rate changes made
 
 More specifically, we will focus on the Federal Reserve and the Bitcoin as these are best representative for the general market.
  
+-Reports contains both the PDF of the report and the beamer presentation.
+-Notebooks contains two Juputer Notebooks, one is the application and the other is the analysis we performed on the data.
+-The Docker file is in the main folder.
+ 
+ 
 Project Organization
 ------------
 
