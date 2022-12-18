@@ -85,9 +85,16 @@ Cameron Storey - 22740815} \\
 \section{Introduction}
 
 The goal of this research report is to discover how changes in FED interest rates have an impact on the prices of cryptocurrencies (e.g. Bitcoin) \newline
-The up-front hypothesis, based on our knowledge of the financial markets is that the higher the FED interest rate goes, the lower the crypto prices will drop, i.e. they have a negative correlation. In this report, an attempt will be made to  confirm (or invalidate) the hypothesis statement above. \newline
 In the first section, the different data sources will be covered. What does the data exactly represent and why is it relevant to look into for this particular research. In the second part, the methodology will be laid out. Lastly, the results will be critically evaluated and interpreted and a final conclusion will be provided. 
+\newline Before we dive in, let's give some introduction on the FED rate and what our initial hypothesis of this research will be. \newline 
 
+The Federal Reserve, or FED, is the central banking system of the United States. One of its main responsibilities is setting interest rates, which can have a significant impact on the overall economy. 
+
+To understand the potential relationship between the FED rate and Bitcoin price, it is first necessary to understand the role that interest rates play in the economy. When the FED raises interest rates, it becomes more expensive for businesses and individuals to borrow money. This can have a dampening effect on economic activity, as people and companies are less likely to take out loans for things like purchasing homes, cars, or investing in new businesses. On the other hand, when the FED lowers interest rates, it becomes cheaper to borrow money, which can encourage increased spending and investment.
+
+Given this, it is logical to assume that changes in the FED rate could potentially affect the price of Bitcoin. If the FED raises interest rates, for example, it could potentially lead to a decrease in demand for risky assets like Bitcoin, as investors may be more hesitant to take on additional risk when borrowing costs are higher. On the other hand, if the FED lowers interest rates, it could potentially lead to an increase in demand for risky assets like Bitcoin, as investors may be more willing to take on additional risk when borrowing costs are lower.
+\newline
+It is thus unclear upfront to predict which force of these two will have most effect on the actual Bitcoin price and whether or not there will be other main macro economic factors that play an important role, which makes this research question all the more interesting. 
 \section{Data}
 
 The datasets that were used to develop an answer to this research question are the BTC-USD Daily Price and the FED rate, both over the extensive time period from 2016 to date. At first, we also looked at several other currencies such as Solana and the Dogecoin, but decided not to include them in the final analysis as their values are less representative for the market. We also looked at other interest rate metrics, such as the LIBOR and SOFR rate. These two interest rates relatively close follow the path of the FED rate and they are both continuous rates. All of the data was obtained from reliable sources such as Yahoo Finance and MarketWatch.
@@ -109,23 +116,35 @@ The programming language Python, with extensions pandas, numpy and matplotlib, i
 
 
 \subsection{Results}
-First we looked at the FED rate changes and if there is an n-day correlation after these changes had taken place for n=1,2,...,7.
+First we looked at the FED rate changes and if there is an n-day correlation after these changes had taken place for n=1,2,...,7. The correlation matrix is given in Figure \ref{fig:corr}:
 \begin{figure}[H]
-   \includegraphics[scale=0.7]{research_project/text/paper/1.png}
+   \includegraphics[scale=0.7]{research_project/text/paper/fed_chng_corr.png}
    \centering
-   \caption{FED Rate changes and n day correlation}
-   \label{fig:FED Rate evolution 2016 - 2022}
+   \caption{FED Rate changes and n day correlation matrix}
+   \label{fig:corr}
 \end{figure}
 From this we see that there is no significant relationship between a certain day after the change takes place and a movement in BTC price movements.\\
 
-Because of this lack of significant results we will now examine if we see any results from the moving average. We plotted the moving averages against price as follows.
+Because of this lack of significant results we will now examine if we see any results from the moving average. We plotted the moving averages against price as Figure \ref{fig:ma}.
 \begin{figure}[H]
    \includegraphics[scale=0.7]{research_project/text/paper/2.png}
    \centering
    \caption{Moving averages against price}
-   \label{fig:FED Rate evolution 2016 - 2022}
+   \label{fig:ma}
 \end{figure}
-We checked whether the change in moving average after an announcement was "out of the ordinary", once again we had no significant findings. Due to the change in the nature of cryptocurrencies it was hard to use the same distribution on BTC from 2022 against that from 5 years ago.
+We checked whether the change in moving average after an announcement was "out of the ordinary". To do it, we first find  95\% confidence intervals for MA with different time span (where we choose 10, 50 and 100 days). Then we check whether the MA where the FED rate changes behaves some ``abnormality". By ``abnormality" we mean the MA data is not inside the according confidence interval. Once again, with almost all the data located in the CI as we anticipated (part of the result in Figure \ref{fig:10dayma} and Figure \ref{fig:ci}), we conclude that there are no significant changes of MA due to the changes of the FED rate. Because of the change in the nature of cryptocurrencies it was hard to use the same distribution on BTC from 2022 against that from 5 years ago.
+\begin{figure}[H]
+   \includegraphics[width=\textwidth]{research_project/text/paper/density10ma.png}
+   \centering
+   \caption{Density of 10-day MA and the FED changing dates }
+   \label{fig:10dayma}
+\end{figure}
+\begin{figure}[H]
+   \includegraphics[scale=0.7]{research_project/text/paper/ma_ci.png}
+   \centering
+   \caption{Check ``abnormality" of moving averages where FED changes}
+   \label{fig:ci}
+\end{figure}
 \subsection{Volatility Analysis}
 Because we observed no significant finding from the analysis in the previous section we have decided to analyse if the changes in FED rate make any difference on the volatility of BTC price.\\
 Below is a graph showing BTC volatility.
@@ -147,7 +166,13 @@ Below is a graph showing BTC volatility.
 Once again we see there is no significant evidence that a change in FED rate has any effect on the volatility of BTC prices.
 \subsection{Daily Change}
 Another metric we have decided to look at was the daily change, the daily high minus the daily low of the day. We will analyse the daily change in the days following a FED rate change.\\
-
+First, to get idea of the distribution of the daily range, we plot Figure \cite{fig:range}.
+\begin{figure}[H]
+   \includegraphics[width = \textwidth]{research_project/text/paper/range.png}
+   \centering
+   \caption{BTC volatility}
+   \label{fig:range}
+\end{figure}
 The obtained data has been inserted below.
 \begin{figure}[H]
    \includegraphics[scale=0.7]{research_project/text/paper/10.png}
@@ -163,6 +188,12 @@ We also analysed the continous interest rate data using the LIBOR rate to observ
 
 After doing this we saw a strong negative correlation in BTC price and LIBOR in the short term, we observed a correlation coefficient of -0.896524, a strong negative correlation, we only analysed this over the past year in which we saw interest rates increasing and BTC price decreasing, we don't believe this is due to causation and is merely just a correlation due to external factors.
 \section{Conclusion}
-In conclusion from all the analysis we have conducted we have no reason to believe the FED rate changes have any real effect of the BTC price movement in the short or long term, from all the analysis we see no significant evidence that there is any correlation in price movements and the change in the FED rate. This leads to the conclusion that there are larger macro forces that influence the BTC price movements and we would be unable to make an informed decision on the future price movements of BTC based on the announcement of a FED rate change alone.
+In conclusion from all the analysis we have conducted we have no reason to believe the FED rate changes have any real effect of the BTC price movement in the short or long term, from all the analysis we see no significant evidence that there is any correlation in price movements and the change in the FED rate.
+
+It is important to note that while there may not be a direct correlation between Federal Reserve interest rate changes and the price of Bitcoin, it is possible that macroeconomic factors influenced by Federal Reserve policies may have an indirect effect on the cryptocurrency market. For example, changes in the Federal Reserve's monetary policy can affect the value of traditional assets such as stocks and bonds, which in turn may affect investor behavior and their willingness to take on risk, including investing in cryptocurrency.
+
+
+In conclusion, while it is possible that changes in the FED rate could influence the demand for Bitcoin, there are also a number of other factors that can impact the cryptocurrency's price. These include things like global economic conditions, investor sentiment, regulatory developments, and technological advances. As a result, it is difficult to draw a direct causal relationship between the FED rate and Bitcoin price.
+
 
 \end{document}
